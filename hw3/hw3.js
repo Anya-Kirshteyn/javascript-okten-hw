@@ -120,3 +120,33 @@
 //         console.log(user)
 //     }
 // }
+
+
+
+
+
+
+
+// function tax(sum) {
+//     let pdv=sum/100*20;
+//     let wartax=sum/100*1.5;
+//     let result=sum-pdv-wartax;
+//     return result;
+// }
+// let number=tax(10000);
+// console.log(number)
+
+
+
+// function foobar() {
+//     console.log(arguments);
+// }
+// foobar(1,2,3);
+
+// debugger
+//
+// function asd(...x){
+//     console.log(x);
+//     console.log(Array.isArray(x));
+// }
+// asd(1,2,3,4,5)
