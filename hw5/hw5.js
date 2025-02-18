@@ -188,3 +188,6 @@
 // };
 //
 // console.log(exchange(10000, [{ currency: 'USD', value: 25 }, { currency: 'EUR', value: 42 }], 'USD')); // 400
+// const str = "Hello";
+// const newStr = str.substring(0, 0) + "a" + str.substring(1);
+// console.log(newStr);
