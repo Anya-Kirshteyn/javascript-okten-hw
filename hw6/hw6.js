@@ -97,18 +97,19 @@
 // - всі буби
 // - всі трефи від 9 та більше
 // ===================
-// // const Suits=[ 'spade', 'diamond','heart', 'clubs'];
-// // const  value= ['6','7','8','9','10','jack','queen','king','ace'];
-// // const color={ spade: 'black', clubs: 'black', diamond: 'red', heart: 'red' };
-// // const deck=[]
-// //
-// // suits.forEach(suit=>{
-// //     value.forEach()
-// // })
-// ====================
+// const Suits=[ 'spade', 'diamond','heart', 'clubs'];
+// const  value= ['6','7','8','9','10','jack','queen','king','ace'];
+// const color={ spade: 'black', clubs: 'black', diamond: 'red', heart: 'red' };
+// const deck=[]
+//
+// suits.forEach(suit=>{
+//     value.forEach()
+// })
+// // ====================
 // const suits = ['spade', 'diamond', 'heart', 'clubs'];
 // const values = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
 // const colors = { spade: 'black', clubs: 'black', diamond: 'red', heart: 'red' };
+//
 // const deck = [];
 // for (let i = 0; i < suits.length; i++) {
 //     for (let j = 0; j < values.length; j++) {
@@ -119,7 +120,18 @@
 //         });
 //     }
 // }
+// // Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
 // console.log(deck);
+
+// let deckss=deck.reduce((acc, card) => {
+//     if(!acc[card.cardSuit]){
+//         acc[card.cardSuit] = [];
+//     }
+//     acc[card.cardSuit].push(card);
+//     return acc;
+// },{})
+// console.log(deckss);
+
 
 
 //
@@ -184,77 +196,137 @@
 //
 // console.log(suitsDeck);
 // написати пошук всіх об'єктів, в яких в modules є sass
-let coursesArray = [
-    {
-        title: 'JavaScript Complex',
-        monthDuration: 5,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-    },
-    {
-        title: 'Java Complex',
-        monthDuration: 6,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'java core',
-            'java advanced']
-    },
-    {
-        title: 'Python Complex',
-        monthDuration: 6,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'python core',
-            'python advanced']
-    },
-    {
-        title: 'QA Complex',
-        monthDuration: 4,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-    },
-    {
-        title: 'FullStack',
-        monthDuration: 7,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'react',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'node.js',
-            'python',
-            'java']
-    },
-    {
-        title: 'Frontend',
-        monthDuration: 4,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-    }
-];
-const sas=coursesArray.filter(item => item.modules.includes('sass') );
-console.log(sas);
+// let coursesArray = [
+//     {
+//         title: 'JavaScript Complex',
+//         monthDuration: 5,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+//     },
+//     {
+//         title: 'Java Complex',
+//         monthDuration: 6,
+//         hourDuration: 909,
+//         modules: ['html',
+//             'css',
+//             'js',
+//             'mysql',
+//             'mongodb',
+//             'angular',
+//             'aws',
+//             'docker',
+//             'git',
+//             'java core',
+//             'java advanced']
+//     },
+//     {
+//         title: 'Python Complex',
+//         monthDuration: 6,
+//         hourDuration: 909,
+//         modules: ['html',
+//             'css',
+//             'js',
+//             'mysql',
+//             'mongodb',
+//             'angular',
+//             'aws',
+//             'docker',
+//             'python core',
+//             'python advanced']
+//     },
+//     {
+//         title: 'QA Complex',
+//         monthDuration: 4,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+//     },
+//     {
+//         title: 'FullStack',
+//         monthDuration: 7,
+//         hourDuration: 909,
+//         modules: ['html',
+//             'css',
+//             'js',
+//             'mysql',
+//             'mongodb',
+//             'react',
+//             'angular',
+//             'aws',
+//             'docker',
+//             'git',
+//             'node.js',
+//             'python',
+//             'java']
+//     },
+//     {
+//         title: 'Frontend',
+//         monthDuration: 4,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+//     }
+// ];
+// const sas=coursesArray.filter(item => item.modules.includes('sass') );
+// console.log(sas);
+//
+// const docker=coursesArray.filter(item => item.modules.includes('docker') );
+// console.log(docker);
+// Задача: Дан массив чисел. Используй map, чтобы получить новый массив, где каждое число возведено в квадрат.
 
-const docker=coursesArray.filter(item => item.modules.includes('docker') );
-console.log(docker);
+// const numbers = [2, 4, 6, 8, 10];
+// const num=numbers.map(number =>number*number);
+// console.log(num);
+// 📌 Задача: Дан массив строк. Используй filter, чтобы оставить только слова длиной более 5 символов.
+// const words = ["apple", "banana", "kiwi", "strawberry", "pear"];
+// const long=words.filter(word => word.length > 5);
+// console.log(long);
+
+
+// Задача: Дан массив пользователей. Используй forEach, чтобы вывести в консоль имена пользователей.
+// const users = [
+//     { name: "Alice", age: 25 },
+//     { name: "Bob", age: 30 },
+//     { name: "Charlie", age: 35 }
+// ];
+// users.forEach(user => {
+//     console.log(user.name);
+// })
+
+
+// Задача: Дан массив чисел. Используй filter, чтобы оставить только четные числа, затем map, чтобы удвоить их.
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const filtered=numbers.filter(number => number % 2 === 0)
+// const maped=filtered.map(num => num*2)
+// console.log(maped)
+
+// const users = [
+//     { name: "Alice", age: 25 },
+//     { name: "Bob", age: 30 },
+//     { name: "Charlie", age: 25 },
+//     { name: "David", age: 30 },
+//     { name: "Eve", age: 35 }
+// ];
+//
+// const groupedByAge = users.reduce((acc, user) => {
+//
+//     if (!acc[user.age]) {
+//         acc[user.age] = [];
+//     }
+//
+//     acc[user.age].push(user);
+//
+//     return acc;
+// }, {});
+//
+// console.log(groupedByAge);
+
+
+
+
+
+
+
+
+
+
+
