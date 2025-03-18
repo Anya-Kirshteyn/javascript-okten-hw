@@ -76,197 +76,197 @@
 
 
 
-// function Car(model, manufacturer, year, maxSpeed, engineVolume) {
-//     this.model = model;
-//     this.manufacturer = manufacturer;
-//     this.year = year;
-//     this.maxSpeed = maxSpeed;
-//     this.engineVolume = engineVolume;
-//     this.drive= function(){
-//      console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)};
-//
-//     this.info = function () {
-//         for (const key in this) {
-//             if (typeof this[key] !== "function") {
-//                 console.log(`${key} - ${this[key]}`);
-//             }
-//         }
-//     };
-//     this.newSpeed = function(addSpeed) {
-//         this.maxSpeed = this.maxSpeed+addSpeed;
-//     }
-//     this.renewYear= function(renewYear) {
-//         if (renewYear > this.year) {this.year = renewYear;}
-//         else (console.log('time machine not found'))
-//     }
-//     this.addDriver = function (driverObg) {
-//         this.driver = driverObg;
-//     };
-//
-// }
+function Car(model, manufacturer, year, maxSpeed, engineVolume) {
+    this.model = model;
+    this.manufacturer = manufacturer;
+    this.year = year;
+    this.maxSpeed = maxSpeed;
+    this.engineVolume = engineVolume;
+    this.drive= function(){
+     console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)};
+
+    this.info = function () {
+        for (const key in this) {
+            if (typeof this[key] !== "function") {
+                console.log(`${key} - ${this[key]}`);
+            }
+        }
+    };
+    this.newSpeed = function(addSpeed) {
+        this.maxSpeed = this.maxSpeed+addSpeed;
+    }
+    this.renewYear= function(renewYear) {
+        if (renewYear > this.year) {this.year = renewYear;}
+        else (console.log('time machine not found'))
+    }
+    this.addDriver = function (driverObg) {
+        this.driver = driverObg;
+    };
+
+}
 
 
-// const myCar = new Car("Model S", "Tesla", 2022, 250, 2.0);
+const myCar = new Car("Model S", "Tesla", 2022, 250, 2.0);
 
-// myCar.drive();
-// myCar.info();
-
-//
-// myCar.newSpeed(30);
-// myCar.drive();
+myCar.drive();
+myCar.info();
 
 
-// myCar.renewYear(2025);
-// myCar.info();
+myCar.newSpeed(30);
+myCar.drive();
 
 
-// myCar.addDriver({ name: "Олексій", age: 30, experience: "10 років" });
-//
-// myCar.info();
-// console.log(myCar.driver);
+myCar.renewYear(2025);
+myCar.info();
 
 
+myCar.addDriver({ name: "Олексій", age: 30, experience: "10 років" });
 
-// class Car{
-//     constructor(model, manufacturer, year, maxSpeed, engineVolume){
-//     this.model = model;
-//     this.manufacturer = manufacturer;
-//     this.year = year;
-//     this.maxSpeed = maxSpeed;
-//     this.engineVolume = engineVolume;
-//     this.drive= function(){
-//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)};
-//
-//     this.info = function () {
-//         for (const key in this) {
-//             if (typeof this[key] !== "function") {
-//                 console.log(`${key} - ${this[key]}`);
-//             }
-//         }
-//     };
-//     this.newSpeed = function(addSpeed) {
-//         this.maxSpeed = this.maxSpeed+addSpeed;
-//     }
-//     this.renewYear= function(renewYear) {
-//         if (renewYear > this.year) {this.year = renewYear;}
-//         else (console.log('time machine not found'))
-//     }
-//     this.addDriver = function (driverObg) {
-//         this.driver = driverObg;
-//     };
-//
-// }}
-//
-// const myCar = new Car("Model S", "Tesla", 2022, 250, 2.0)
-// myCar.info();
-//
+myCar.info();
+console.log(myCar.driver);
 
 
 
-// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
-// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
-//     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
-//     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
-//  class Cinderella{
-//     constructor(name,age,footsize){
-//         this.name = name;
-//         this.age = age;
-//         this.footsize = footsize;
-//     }
-//  }
-//
-// class Creep{
-//     constructor(name,age,intertest){
-//         this.name = name;
-//         this.age = age;
-//         this.intertest = intertest;
-//     }
-// }
-//
-// const Cinderellas=[
-//     new Cinderella('girl',18,38),
-//     new Cinderella('giarl',18,39),
-//     new Cinderella('gisdrl',18,48),
-//     new Cinderella('girlsd',18,38),
-//     new Cinderella('girl',18,34),
-//     new Cinderella('giaarl',18,38),
-//     new Cinderella('gidrl',18,38),
-//     new Cinderella('theItgirl',27,37),
-//     new Cinderella('girl',18,38),
-//     new Cinderella('giddrl',18,38),
-//
-// ]
-// const prince=new Creep('prince',27,37)
+class Car{
+    constructor(model, manufacturer, year, maxSpeed, engineVolume){
+    this.model = model;
+    this.manufacturer = manufacturer;
+    this.year = year;
+    this.maxSpeed = maxSpeed;
+    this.engineVolume = engineVolume;
+    this.drive= function(){
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)};
 
-// for (girl of Cinderellas){
-//     if (girl.footsize === prince.intertest){
-//         console.log(girl.name);
-//     }
-// }
+    this.info = function () {
+        for (const key in this) {
+            if (typeof this[key] !== "function") {
+                console.log(`${key} - ${this[key]}`);
+            }
+        }
+    };
+    this.newSpeed = function(addSpeed) {
+        this.maxSpeed = this.maxSpeed+addSpeed;
+    }
+    this.renewYear= function(renewYear) {
+        if (renewYear > this.year) {this.year = renewYear;}
+        else (console.log('time machine not found'))
+    }
+    this.addDriver = function (driverObg) {
+        this.driver = driverObg;
+    };
 
-// const serch=Cinderellas.find(girl => girl.footsize === prince.intertest)
-// console.log(serch)
+}}
 
-//
-// *Через Array.prototype. створити власний foreach, filter
+const myCar = new Car("Model S", "Tesla", 2022, 250, 2.0)
+myCar.info();
 
-//
-//
-// Array.prototype.myForEach = function (callback) {
-//     for (const item of this) {
-//         callback(item);
-//     }
-// };
-//
-// [11, 22, 33].myForEach((x) => console.log(x));
 
-// -- відсортувати його за спаданням за monthDuration
-// -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
-// -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
 
-// let coursesAndDurationArray = [
-//     {title: 'JavaScript Complex', monthDuration: 5},
-//     {title: 'Java Complex', monthDuration: 6},
-//     {title: 'Python Complex', monthDuration: 6},
-//     {title: 'QA Complex', monthDuration: 4},
-//     {title: 'FullStack', monthDuration: 7},
-//     {title: 'Frontend', monthDuration: 4}
-// ];
 
-// coursesAndDurationArray.sort((a,b)=>a.month-b.month);
-// console.log(coursesAndDurationArray.sort((a,b)=>a.monthDuration-b.monthDuration));
-// const more=coursesAndDurationArray.filter(item=>item.monthDuration>5)
-// console.log(more);
+-створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+    За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+    Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+ class Cinderella{
+    constructor(name,age,footsize){
+        this.name = name;
+        this.age = age;
+        this.footsize = footsize;
+    }
+ }
 
-//
-//
-// Array.prototype.myway=function (callback){
-//     let arr=[]
-//     for(let item of this){
-//         if(callback(item)){
-//             arr.push(item)
-//         }
-//     }
-//     return arr;
-// }
-//
-// const users = [
-//     { name: "Alice", age: 25, status: "true" },
-//     { name: "Bob", age: 30, status: "false" },
-//     { name: "Charlie", age: 22, status: "true" },
-//     { name: "David", age: 28, status: "true" },
-//     { name: "Eve", age: 35, status: "false" },
-//     { name: "Frank", age: 40, status: "true" },
-//     { name: "Grace", age: 27, status: "false" },
-//     { name: "Hank", age: 32, status: "true" },
-//     { name: "Ivy", age: 29, status: "true" },
-//     { name: "Jack", age: 24, status: "true" }
-// ];
-//
-// const results=users.myway((user)=>user.name.length > 4)
-// console.log(results);
-//
-//
+class Creep{
+    constructor(name,age,intertest){
+        this.name = name;
+        this.age = age;
+        this.intertest = intertest;
+    }
+}
+
+const Cinderellas=[
+    new Cinderella('girl',18,38),
+    new Cinderella('giarl',18,39),
+    new Cinderella('gisdrl',18,48),
+    new Cinderella('girlsd',18,38),
+    new Cinderella('girl',18,34),
+    new Cinderella('giaarl',18,38),
+    new Cinderella('gidrl',18,38),
+    new Cinderella('theItgirl',27,37),
+    new Cinderella('girl',18,38),
+    new Cinderella('giddrl',18,38),
+
+]
+const prince=new Creep('prince',27,37)
+
+for (girl of Cinderellas){
+    if (girl.footsize === prince.intertest){
+        console.log(girl.name);
+    }
+}
+
+const serch=Cinderellas.find(girl => girl.footsize === prince.intertest)
+console.log(serch)
+
+
+*Через Array.prototype. створити власний foreach, filter
+
+
+
+Array.prototype.myForEach = function (callback) {
+    for (const item of this) {
+        callback(item);
+    }
+};
+
+[11, 22, 33].myForEach((x) => console.log(x));
+
+-- відсортувати його за спаданням за monthDuration
+-- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
+-- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+
+coursesAndDurationArray.sort((a,b)=>a.month-b.month);
+console.log(coursesAndDurationArray.sort((a,b)=>a.monthDuration-b.monthDuration));
+const more=coursesAndDurationArray.filter(item=>item.monthDuration>5)
+console.log(more);
+
+
+
+Array.prototype.myway=function (callback){
+    let arr=[]
+    for(let item of this){
+        if(callback(item)){
+            arr.push(item)
+        }
+    }
+    return arr;
+}
+
+const users = [
+    { name: "Alice", age: 25, status: "true" },
+    { name: "Bob", age: 30, status: "false" },
+    { name: "Charlie", age: 22, status: "true" },
+    { name: "David", age: 28, status: "true" },
+    { name: "Eve", age: 35, status: "false" },
+    { name: "Frank", age: 40, status: "true" },
+    { name: "Grace", age: 27, status: "false" },
+    { name: "Hank", age: 32, status: "true" },
+    { name: "Ivy", age: 29, status: "true" },
+    { name: "Jack", age: 24, status: "true" }
+];
+
+const results=users.myway((user)=>user.name.length > 4)
+console.log(results);
+
+
 
 
 
