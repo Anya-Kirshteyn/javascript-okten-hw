@@ -32,43 +32,44 @@
 // <button id="prev"> prev </button>
 // <button id="next"> next </button>
 
-// let container=document.getElementById("block");
-// let prevBtn=document.getElementById("prev");
-// let nextBtn=document.getElementById("next");
-// let data=[]
-// for(let i=1; i <= 100 ; i++){
-//     data.push({index: i, name:`object${i}`})
-// }
-// let start=0;
-// let end=10;
-// function render(){
-//     container.innerHTML='';
-//
-//     for(let i=start; i < end ;i++){
-//         if(data[i]){
-//        let div= document.createElement('div')
-//         div.innerText=`${data[i].name} index-${data[i].index}`;
-//        container.appendChild(div);
-//     }}
-//
-// }
-// nextBtn.onclick=()=>{
-//     if(end < data.length){
-//         start+=10
-//         end+=10
-//         render();
-//     }
-//
-// }
-//
-// prevBtn.onclick=()=>{
-//     if(start > 0){
-//         start-=10
-//         end-=10
-//         render();
-//     }
-//
-// }
+let container=document.getElementById("block");
+let prevBtn=document.getElementById("prev");
+let nextBtn=document.getElementById("next");
+let data=[]
+for(let i=1; i <= 100 ; i++){
+    data.push({index: i, name:`object${i}`})
+}
+let start=0;
+let end=10;
+function render(){
+    container.innerHTML='';
+
+    for(let i=start; i < end ;i++){
+        if(data[i]){
+       let div= document.createElement('div')
+        div.innerText=`${data[i].name} index-${data[i].index}`;
+       container.appendChild(div);
+    }}
+
+}
+nextBtn.onclick=()=>{
+    if(end < data.length){
+        start+=10
+        end+=10
+        render();
+    }
+
+}
+
+prevBtn.onclick=()=>{
+    if(start > 0){
+        start-=10
+        end-=10
+        render();
+    }
+
+}
+
 
 
 
