@@ -97,14 +97,7 @@
 // - всі буби
 // - всі трефи від 9 та більше
 // ===================
-// const Suits=[ 'spade', 'diamond','heart', 'clubs'];
-// const  value= ['6','7','8','9','10','jack','queen','king','ace'];
-// const color={ spade: 'black', clubs: 'black', diamond: 'red', heart: 'red' };
-// const deck=[]
-//
-// suits.forEach(suit=>{
-//     value.forEach()
-// })
+
 // // ====================
 // const suits = ['spade', 'diamond', 'heart', 'clubs'];
 // const values = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
