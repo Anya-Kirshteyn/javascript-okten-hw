@@ -187,23 +187,63 @@
 // 🔁 3. Все пары чисел, сумма которых равна 10
 // Найди и выведи все пары чисел от 1 до 10, у которых сумма = 10
 // Пример:
-let arr=[1,2,3,4,5,6,7,8,9]
-for(let i=0; i< arr.length; i++){
-    for(let j=0;j< arr.length; j++){
-        let sum=arr[i]+arr[j]
-        if(sum%10 === 0){
-        console.log(sum)}
-    }
-}
+// let arr=[1,2,3,4,5,6,7,8,9]
+// for(let i=0; i< arr.length; i++){
+//     for(let j=0;j< arr.length; j++){
+//         let sum=arr[i]+arr[j]
+//         if(sum%10 === 0){
+//         console.log(`${arr[i]}+${arr[j]}=${sum}`)}
+//     }
+// }
+
+
+//
+// - Знайти та вивести довижину настипних стрінгових значень
+// 'hello world', 'lorem ipsum', 'javascript is cool'
+// //
+// let len=['hello world', 'lorem ipsum', 'javascript is cool']
+// for(let i=0; i< len.length; i++){
+//     console.log(len[i].length)
+// }
+
+
+// - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+//
+// let str = 'Ревуть воли як ясла повні';
+// stringToarray=(str)=> {
+//     const arr = str.split(' ')
+//     console.log(arr)
+// }
+// stringToarray(str)
 
 
 
+// - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
+//
+//
+//    let bar=[10,8,-7,55,987,-1011,0,1050,0]
+// let b=bar.map(b=>b+'')
+// console.log(b)
 
-
-
-
-
-
+// #5hqyKTfmc
+// - створити функцію sortNums(array,direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
+//     let nums = [11,21,3];nums[i]>nums[i+1]
+// sortNums(nums,'ascending') // [3,11,21]
+// sortNums(nums,'descending') // [21,11,3]
+//
+// let nums = [11,21,3]
+// sortNums=(nums, direction)=>{
+//     if( direction === 'ascending'){
+//         console.log(nums.sort((a, b)=>a-b))
+//     }
+//     else if( direction === 'descending'){
+//         console.log(nums.sort((a, b)=>b-a))
+//     }
+//     else{
+//     console.log('try again')
+//     }
+// }
+// sortNums(nums,'ascending')
 
 
 
