@@ -4,28 +4,28 @@
 //
 //     -2)Подумати і реалізувати логіку, в якій кінцевий об'єкт буде мати функції,' +
 // -3)'які в нього були до цього моменту.
-// function cloner(obj){
-//     if(obj){
-//         let functions=[]
-//         for (let key in obj){
-//             if(typeof obj[key] === 'function'){
-//                 const functionClone = obj[key].bind({});
-//                 functions.push({functionClone, key})
-//             }
-//         }
-//         const cloneObg=JSON.parse(JSON.stringify(obj))
-//         for (let func of functions){
-//
-//             cloneObg[func.key] = func.functionClone;
-//         }
-//         // console.log(cloneObg)
-//         return cloneObg
-//     }
-//     throw new Error('10101010')
-// }
-// const clone=cloner({id:123,name:"John", greeting(){console.log("Greeting")}, beliberda(){console.log("Beliberda")}})
+function cloner(obj){
+    if(obj){
+        let functions=[]
+        for (let key in obj){
+            if(typeof obj[key] === 'function'){
+                const functionClone = obj[key].bind({});
+                functions.push({functionClone, key})
+            }
+        }
+        const cloneObg=JSON.parse(JSON.stringify(obj))
+        for (let func of functions){
 
-// console.log(clone)
+            cloneObg[func.key] = func.functionClone;
+        }
+        // console.log(cloneObg)
+        return cloneObg
+    }
+    throw new Error('10101010')
+}
+const clone=cloner({id:123,name:"John", greeting(){console.log("Greeting")}, beliberda(){console.log("Beliberda")}})
+
+console.log(clone)
 
 //
 // let coursesAndDurationArray = [

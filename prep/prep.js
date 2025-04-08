@@ -245,7 +245,53 @@
 // }
 // sortNums(nums,'ascending')
 
+// Задание: Напиши функцию sortStudents(arr, direction)
+//
+// direction === 'asc' — отсортируй студентов по возрасту по возрастанию
+//
+// direction === 'desc' — по убыванию
+//
+// let students = [
+//     {name: 'Anna', age: 23},
+//     {name: 'Ivan', age: 20},
+//     {name: 'Maria', age: 25},
+//     {name: 'Oleh', age: 22}]
+//
+// sortStudents=(arr, direction)=>{
+//     if(direction === 'asc'){
+//     console.log(arr.sort((a, b)=>a.age-b.age))
+//      }
+//     else if(direction === 'desc'){
+//         console.log(arr.sort((a, b)=>b.age-a.age))
+//     }
+// }
+//
+// sortStudents(students, 'asc')
 
 
 
+// Задание: Сгенерируй все возможные пары, где имя1 ≠ имя2
+// Alice - Bob
+// Alice - Charlie
+// Bob - Alice
+// let names = ['Alice', 'Bob', 'Charlie', 'Diana'];
+// for( let i=0; i<names.length; i++){
+//     for(let j=i+1;j< names.length; j++){
+//         console.log(`${names[i]}-${names[j]}`)
+//     }
+// }
 
+// - створити конструктор для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+// створити пустий масив, наповнити його 10 об'єктами Client
+//
+// function Client(id, name, surname , email, phone, order){
+//     this.id=id;
+//     this.name=name;
+//     this.surname=surname;
+//     this.email=email;
+//     this.phone= +phone
+//     this.order=order
+// }
+// let client1=new Client(1,'sasy','ivanov', 'aa@msil.com','04044040',['grece','soci'])
+//
+// console.log(client1)
