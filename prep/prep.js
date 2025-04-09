@@ -326,5 +326,90 @@
 //
 // }
 
+// ***PAGINATION
+// зробити масив на 100 об'єктів та дві кнопки prev next
+// при завантажені сторінки з'являються перші 10 об'єктів.
+//     При натисканні next виводяться наступні 10 об'єктів
+// При натисканні prev виводяться попередні 10 об'єктів
+
+// let data=[]
+// for(let i=0;i<100;i++){
+//     data.push(`object # ${i}`)
+// }
+// let container=document.getElementById('container')
+// let prevBtn=document.getElementById('prev')
+// let nextBth=document.getElementById('next')
+// let start=0
+// let end=10
+//
+// render=()=>{
+//     container.innerHTML='';
+//     for(let i=start; i<end;i++){
+//         let div=document.createElement('div')
+//         div.innerText=data[i]
+//         container.appendChild(div)
+//     }
+// }
+//
+// prevBtn.onclick=function (){
+//     if (start>0){
+//         start-=10;
+//         end-=10;
+//         render()
+//     }
+// }
+//
+// nextBth.onclick=function (){
+//     if (end<data.length){
+//         end+=10;
+//         start+=10
+//         render()
+//     }
+// }
+//
+// let data=[];
+// for(let i=1;i<=100;i++){
+//     data.push(`obj # ${i}`)
+// }
+// let container=document.getElementById('container')
+// let nextBtn=document.getElementById('next')
+// let prevBth=document.getElementById('prev')
+// let start=0
+// let end=10
+//
+//
+//
+// function render(){
+//     container.innerHTML=''
+//     for(let i=start;i<end;i++){
+//
+//         let p=document.createElement('p')
+//         p.innerText=data[i]
+//         container.append(p)
+//
+//     }
+// }
+// prevBth.onclick=function (){
+//     if (start>0){
+//         start-=10
+//         end-=10
+//         render()
+//     }
+// }
+// nextBtn.onclick=function (){
+//     if (end<data.length){
+//         end+=10
+//         start+=10
+//         render()
+//     }
+// }
+
+
+
+
+
+
+
+
 
 
