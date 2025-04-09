@@ -3,7 +3,7 @@
 //     зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
 //     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд - нічого не відбувається
 
-
+//
 // document.onreadystatechange = function callback () {
 //     if (document.readyState === "complete") {
 //         let div = document.getElementById("loxotron");
