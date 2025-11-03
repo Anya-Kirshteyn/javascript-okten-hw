@@ -645,3 +645,146 @@
 // currentNum=Number(currentNum)+1
 // localStorage.setItem("key",currentNum)
 // divcount.innerText=currentNum
+
+
+// Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховище,
+//     в масив sessionsList зберігається інформація про дату та час відвідування сторінки.
+//     Є  сторінка sessionsListPage.html (назва довільна),
+// при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html.
+//     Інфу НЕ виводити в консоль, а малювати в DOM
+// let currentTime=JSON.parse(localStorage.getItem('time')) || []
+// currentTime.push(Date.now())
+// localStorage.setItem('time', JSON.stringify(currentTime))
+
+
+// створити конвертор ваги з кг в фунти. дані заповнюються через інпут.
+//     При введенні даних обрахунок стається миттєво, без натискань додаткових кнопок
+
+// let weightInput=document.getElementById("weightInput");
+// let weightDiv=document.getElementById("weightDiv");
+// addEventListener("input",()=>{
+// weightDiv.innerText=weightInput.value * 2
+// })
+
+
+// #RbQGnH5DuC
+// В localStorage зберігаються масиви. Вам потрібно зробити функцію,
+// які дістає потрібний вам масив з localStorage та додає в нього об’єкт
+// сигнатура функції –
+// addToLocalStorage(arrayName:string,objToAdd:any{}):void
+// function addToLocalStorage(arrayName,objToAdd){
+//   let array=JSON.parse(localStorage.getItem(arrayName)) || []
+//   array.push(objToAdd)
+//     localStorage.setItem(arrayName,JSON.stringify(array))
+// }
+// addToLocalStorage('users', { name: 'Anya', age: 20 })
+
+// Створити 3 інпута та кнопку. Один визначає кількість рядків, другий – кількість ячеєк, третій – вміст ячеєк.
+//     При натисканні кнопки вся ця інформація зчитується і формується табличка з відповідним вмістом.
+// let btnTable=document.getElementById('btnTable')
+// let table=document.createElement('table');
+// table.style.border = '1px solid black'
+// btnTable.onclick=()=>{
+//
+//     let rowsIn=document.getElementById('rowsInput').value
+//     let cols=document.getElementById('colsInput').value
+//     let content=document.getElementById('contentInput').value
+//     let tableDiv=document.getElementById('tableDiv')
+//
+//     for(let i=0;i<rowsIn;i++){
+//         let row=document.createElement("tr");
+//         for(let j=0;j<cols;j++){
+//             let col=document.createElement("td");
+//             col.innerText=content;
+//             col.style.border = '1px solid black'
+//             row.appendChild(col);
+//         }
+//         table.appendChild(row);
+//     }
+//  tableDiv.appendChild(table);
+// }
+
+
+// *** (подібне було вище, але…будьте уважні в другій частині) створити сторінку з довільним блоком, в середині якого є значення “100грн”
+//
+// при перезавантаженні сторінки до значення додається по 10грн, але !!! зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
+//
+//     При перезавантаженні, яке відбулось раніше ніж минуло 10 секунд, нічого не відбувається
+
+// let divCount=document.getElementById("countDiv");
+//
+// document.addEventListener('readystatechange', () => {
+//     if (document.readyState === "complete"){
+//         let curentNum = localStorage.getItem("curentNum") || 100;
+//
+//     let curentTime = Number(localStorage.getItem("curentTime")) || 0;
+//         let now=Date.now();
+//     if (now - curentTime > 10000){
+//         curentTime=now
+//         curentNum=Number(curentNum)+10
+//
+//         localStorage.setItem("curentNum", curentNum);
+//         localStorage.setItem("curentTime", curentTime);
+//     }
+//         divCount.innerText=JSON.parse(localStorage.getItem("curentNum"));
+//     }
+// })
+
+// #NKB0tgWIK1G
+// ***PAGINATION
+// зробити масив на 100 об’єктів та дві кнопки prev next
+// при завантаженні сторінки з’являються перші 10 об’єктів.
+//     При натисканні next виводяться наступні 10 об’єктів
+// При натисканні prev виводяться попередні 10 об’єктів
+
+// let array=[]
+// for (let i = 1; i < 100; i++) {
+//     array.push({id: i, title:i});
+// }
+//
+// let prev=document.getElementById('prev')
+// let next=document.getElementById('next')
+// let container=document.getElementById('container')
+//
+// let pageSize=10
+// let currentPage=1;
+// let totalItems=array.length;
+// let totalPages= totalItems/pageSize;
+//
+// function renderPage(){
+//     container.innerHTML='';
+//
+//
+//     const startOfPage=(currentPage-1)*pageSize;
+//     const endOfPage=startOfPage+pageSize;
+//     const pageContent=array.slice(startOfPage,endOfPage);
+//
+//     pageContent.forEach(item=>{
+//      const div=document.createElement('div');
+//      div.innerText=`${item.id}  ${item.title}`;
+//      container.appendChild(div);
+//     })
+//
+//     prev.disabled= currentPage===1;
+//     next.disabled= currentPage===totalPages;
+// }
+//
+// prev.addEventListener('click',()=>{
+//     if(currentPage>1){
+//         currentPage--;
+//         renderPage();
+//     }
+// })
+//
+// next.addEventListener('click',()=>{
+//     if(currentPage<totalPages){
+//         currentPage++
+//         renderPage();
+//     }
+// })
+//
+// renderPage();
+
+
+// – взяти https://dummyjson.com/docs/carts та вивести інформацію про всі корзини. Відобразити всі поля кожної корзини.
+
